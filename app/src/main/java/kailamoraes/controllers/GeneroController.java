@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import marcocarvalho.models.Genero;
-import marcocarvalho.repositories.GeneroRepository;
+import kailamoraes.models.Genero;
+import kailamoraes.repositories.GeneroRepository;
 
 @Controller
 @RequestMapping("/generos")
