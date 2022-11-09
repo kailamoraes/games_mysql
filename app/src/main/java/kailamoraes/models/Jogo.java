@@ -1,10 +1,26 @@
 package kailamoraes.models;
 
+import javax.persistente.Entity;
+import javax.persistente.Table;
+import javax.persistente.Id;
+import javax.persistente.GeneratedValue;
+import javax.persistente.GeneratitionType;
+import javax.persistente.Table;
+import javax.persistente.ManytoOne;
+import javax.persistente.JoinColumn;
+
+
+@Entity
+@Table(name="jogos")
 public class Jogo {
+    @Id
+    @GeneratedValue(stratrgy=GeneratitionType.IDENTITY)
     private int id;
     private String titulo;
 
-    private int idGenero;
+    @ManytoOne
+    @JoinColumn(name="id_genero")
+    private Genero genero;
 
     public void setId(int id) {
         this.id = id;
@@ -14,13 +30,13 @@ public class Jogo {
     }
 
     public void setTitulo(Srting titulo) {
-        return this.titulo;
+        return this = titulo;
     }
 
-    public void setGenero(int idGenero) {
-        this.idGenero = idGenero;
+    public void setGenero(Genero Genero) {
+        this.genero = genero;
     }
-    public int getIdGenero() {
-        return this.idGenero;
+    public int Genero getGenero() {
+        return this.genero;
     }
 }
